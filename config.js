@@ -1,11 +1,5 @@
 System.config({
   "baseURL": "/",
-  "transpiler": "babel",
-  "babelOptions": {
-    "optional": [
-      "runtime"
-    ]
-  },
   "paths": {
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
@@ -20,6 +14,8 @@ System.config({
     "babel": "npm:babel@4.7.16",
     "babel-runtime": "npm:babel-runtime@4.7.16",
     "bootstrap": "github:twbs/bootstrap@3.3.4",
+    "traceur": "github:jmcriffey/bower-traceur@0.0.87",
+    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.87",
     "github:aurelia/binding@0.5.0": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.6.0",
       "aurelia-metadata": "github:aurelia/metadata@0.4.0",
