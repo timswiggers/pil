@@ -9,12 +9,12 @@ export class App {
   constructor(router){
     this.router = router;
     this.router.configure(config => {
-      config.title = 'PIL';
+      config.title = 'Product Information Label';
       config.map([
-        { route: '', moduleId: 'home'},
-        { route: 'pil', moduleId: 'pil/pil-label'},
-        { route: 'asl', moduleId: 'asl/asl-label'},
-        { route: 'products', moduleId: 'products/products-list'},
+        { route: ['', 'home'], moduleId: 'home'},
+        { route: 'pil', moduleId: 'pil/pil-label', title: 'PIL' },
+        { route: 'asl', moduleId: 'asl/asl-label', title: 'ASL' },
+        { route: 'products', moduleId: 'products/products-list', title: 'Products' },
       ]);
     });
   }
