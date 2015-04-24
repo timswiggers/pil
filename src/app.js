@@ -12,9 +12,9 @@ export class App {
       config.title = 'Product Information Label';
       config.map([
         { route: ['', 'home'], moduleId: 'home'},
-        { route: 'pil', moduleId: 'pil/pil-label', title: 'PIL' },
-        { route: 'asl', moduleId: 'asl/asl-label', title: 'ASL' },
-        { route: 'products', moduleId: 'products/products-list', title: 'Products' },
+        { route: 'pil', moduleId: 'pil/pil-label', title: 'PIL', nav: true },
+        { route: 'asl', moduleId: 'asl/asl-label', title: 'ASL', nav: true },
+        { route: 'products', moduleId: 'products/products-list', title: 'Products', nav: true },
       ]);
     });
   }
