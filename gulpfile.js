@@ -1,9 +1,12 @@
 var gulp = require('gulp'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    watch = require('gulp-watch');
 
 gulp.task('build', function(){
   gulp.src(['src/*.js', 'src/*.html'])
-    .pipe(gulp.dest('dist'));
+    .pipe(watch(['src/*.js', 'src/*.html']))
+    .pipe(gulp.dest('dist'))
+    .pipe(connect.reload());
 })
 
 gulp.task('serve', function(){
@@ -13,13 +16,4 @@ gulp.task('serve', function(){
   });
 });
 
-gulp.task('html', function () {
-  gulp.src('./app/*.html')
-    .pipe(connect.reload());
-});
-
-gulp.task('watch', function () {
-  gulp.watch(['./app/*.html'], ['html']);
-});
-
-gulp.task('default', ['build', 'serve', 'watch']);
+gulp.task('default', ['build', 'serve']);
