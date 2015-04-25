@@ -2,11 +2,11 @@ import {Router} from 'aurelia-router';
 
 export class App {
 
-  static inject(){
+  static inject() {
     return [Router];
   };
 
-  constructor(router){
+  constructor(router) {
     this.router = router;
     this.router.configure(config => {
       config.title = 'Product Information Label';
