@@ -4,13 +4,17 @@ var gulp = require('gulp'),
     watch = require('gulp-watch');
 
 gulp.task('clean', function(){
-  gulp.src('dist/*')
+  gulp.src('dist')
     .pipe(clean());
 });
 
 gulp.task('build', ['clean'], function(){
-  gulp.src(['src/**/*.js', 'src/**/*.html'])
-    .pipe(watch(['index.html', 'src/**/*.js', 'src/**/*.html']))
+  gulp.src([
+      'src/**/*.js',
+      'src/**/*.html'])
+    .pipe(watch([
+        'src/**/*.js',
+        'src/**/*.html']))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 })

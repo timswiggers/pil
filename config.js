@@ -1,5 +1,10 @@
 System.config({
   "baseURL": "/",
+  "babelOptions": {
+    "optional": [
+      "runtime"
+    ]
+  },
   "paths": {
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
@@ -11,7 +16,7 @@ System.config({
   "map": {
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.11.0",
     "aurelia/bootstrapper": "github:aurelia/bootstrapper@0.11.0",
-    "babel": "npm:babel@4.7.16",
+    "babel": "npm:babel-core@5.1.11",
     "babel-runtime": "npm:babel-runtime@4.7.16",
     "bootstrap": "github:twbs/bootstrap@3.3.4",
     "font-awesome": "npm:font-awesome@4.3.0",
