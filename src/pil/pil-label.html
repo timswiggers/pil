@@ -6,7 +6,7 @@
       <div class="form-group">
         <label for="productionUnit" class="col-md-4 control-label">Production Unit</label>
         <div class="col-md-4">
-          <select class="form-control" name="productionUnit">
+          <select class="form-control" name="productionUnit" value.bind="label.productionUnit">
             <option></option>
             <option>A_CL</option>
           </select>
@@ -15,7 +15,7 @@
       <div class="form-group">
         <label for="product" class="col-md-4 control-label">Product</label>
         <div class="col-md-4">
-          <select class="form-control" name="product">
+          <select class="form-control" name="product" value.bind="label.product">
             <option></option>
             <option>MON6158</option>
           </select>
@@ -24,7 +24,7 @@
       <div class="form-group">
         <label for="secondaryProduct" class="col-md-4 control-label">Secondary Product</label>
         <div class="col-md-4">
-          <select class="form-control" name="secondaryProduct">
+          <select class="form-control" name="secondaryProduct" value.bind="label.secondaryProduct">
             <option></option>
             <option>STOCKSTAAL</option>
           </select>
@@ -35,13 +35,24 @@
 
     <fieldset>
 
+      <div class="form-group">
+        <label class="col-md-4 control-label">Cleaning</label>
+        <div class="col-md-4">
 
+            <div class="checkbox" repeat.for="cleaningWay of label.cleaningWays">
+              <label>
+                <input type="checkbox" checked.bind="cleaningWay.selected"> ${cleaningWay.name}
+              </label>
+            </div>
+
+        </div>
+      </div>
 
     </fieldset>
 
     <div class="form-group">
       <div class="col-sm-offset-4 col-sm-4">
-        <button type="button" class="btn btn-primary btn-lg active" click.delegate="print()">Print Label</button>
+        <button type="button" class="btn btn-primary btn-lg active" click.delegate="print()" disabled.bind="!canPrint">Print Label</button>
         <button type="button" class="btn btn-default btn-lg active" click.delegate="clear()">Clear</button>
       </div>
     </div>
