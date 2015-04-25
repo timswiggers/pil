@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     clean = require('gulp-clean'),
     connect = require('gulp-connect'),
+    eslint = require('gulp-eslint'),
     watch = require('gulp-watch');
 
 gulp.task('clean', function(){
@@ -12,6 +13,7 @@ gulp.task('build', ['clean'], function(){
   gulp.src([
       'src/**/*.js',
       'src/**/*.html'])
+    .pipe(eslint())
     .pipe(watch([
         'src/**/*.js',
         'src/**/*.html']))
