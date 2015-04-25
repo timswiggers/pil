@@ -1,3 +1,50 @@
 <template>
-  PIL
+
+  <form class="form-horizontal">
+    <fieldset>
+
+      <div class="form-group">
+        <label for="productionUnit" class="col-md-4 control-label">Production Unit</label>
+        <div class="col-md-4">
+          <select class="form-control" name="productionUnit">
+            <option></option>
+            <option>A_CL</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="product" class="col-md-4 control-label">Product</label>
+        <div class="col-md-4">
+          <select class="form-control" name="product">
+            <option></option>
+            <option>MON6158</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="secondaryProduct" class="col-md-4 control-label">Secondary Product</label>
+        <div class="col-md-4">
+          <select class="form-control" name="secondaryProduct">
+            <option></option>
+            <option>STOCKSTAAL</option>
+          </select>
+        </div>
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+
+    
+
+    </fieldset>
+
+    <div class="form-group">
+      <div class="col-sm-offset-4 col-sm-4">
+        <button type="button" class="btn btn-primary btn-lg active">Print Label</button>
+        <button type="button" class="btn btn-default btn-lg active">Clear</button>
+      </div>
+    </div>
+  </form>
+
 </template>
