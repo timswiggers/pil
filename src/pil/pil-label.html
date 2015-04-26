@@ -4,28 +4,26 @@
     <fieldset>
 
       <div class="form-group">
-        <label for="productionUnit" class="col-md-4 control-label">Production Unit</label>
+        <label class="col-md-4 control-label">Product</label>
         <div class="col-md-4">
           <select class="form-control" name="productionUnit" value.bind="label.productionUnit">
-            <option></option>
+            <option value="" disabled selected>Select a production unit</option>
             <option>A_CL</option>
           </select>
         </div>
       </div>
       <div class="form-group">
-        <label for="product" class="col-md-4 control-label">Product</label>
-        <div class="col-md-4">
-          <select class="form-control" name="product" value.bind="label.product">
-            <option></option>
+        <div class="col-md-offset-4 col-md-4">
+          <select class="form-control" name="product" value.bind="label.product" disabled.bind="!canSelectProduct">
+            <option value="" disabled selected>Select a product</option>
             <option>MON6158</option>
           </select>
         </div>
       </div>
       <div class="form-group">
-        <label for="secondaryProduct" class="col-md-4 control-label">Secondary Product</label>
-        <div class="col-md-4">
-          <select class="form-control" name="secondaryProduct" value.bind="label.secondaryProduct">
-            <option></option>
+        <div class="col-md-offset-4 col-md-4">
+          <select class="form-control" name="secondaryProduct" value.bind="label.secondaryProduct" disabled.bind="!canSelectSecondaryProduct">
+            <option value="" disabled selected>Select a secondary product</option>
             <option>STOCKSTAAL</option>
           </select>
         </div>

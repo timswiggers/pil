@@ -6,9 +6,15 @@ export class PILLabel {
     this.label = new LabelData();
   }
 
+  get canSelectProduct() {
+    return this.label.productionUnit;
+  }
+
+  get canSelectSecondaryProduct() {
+    return this.canSelectProduct && this.label.product;
+  }
+
   print() {
-
-
 
   }
 
@@ -21,9 +27,9 @@ export class PILLabel {
   }
 
   clear() {
-    this.label.productionUnit = null;
-    this.label.product = null;
-    this.label.secondaryProduct = null;
+    this.label.productionUnit = "";
+    this.label.product = "";
+    this.label.secondaryProduct = "";
 
     this.label.cleaningWays.forEach(w => w.selected = false);
   }
