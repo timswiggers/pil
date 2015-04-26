@@ -22,7 +22,9 @@
       });
     </script>
   <script>
-    System.import('aurelia-bootstrapper');
+    System.import('jquery').then(function() {
+      System.import('aurelia-bootstrapper');
+    });
   </script>
 </body>
 </html>
