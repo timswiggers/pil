@@ -1,4 +1,4 @@
-import {LabelData} from './label-info';
+import {LabelData} from './label-data';
 
 export class PILLabel {
 
