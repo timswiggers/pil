@@ -25,3 +25,7 @@ fieldset {
 p.description {
   padding: 6px;
 }
+
+.buttons {
+  margin: 20px auto;
+}

@@ -4,8 +4,8 @@
     <fieldset>
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Product</label>
-        <div class="col-md-4">
+        <label class="col-xs-4 control-label">Product</label>
+        <div class="col-xs-4">
           <select class="form-control" name="productionUnit" value.bind="label.productionUnit">
             <option value="" disabled selected>Select a production unit</option>
             <option>A_CL</option>
@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="form-group">
-        <div class="col-md-offset-4 col-md-4">
+        <div class="col-xs-offset-4 col-xs-4">
           <select class="form-control" name="product" value.bind="label.product" disabled.bind="!canSelectProduct">
             <option value="" disabled selected>Select a product</option>
             <option>MON6158</option>
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="form-group">
-        <div class="col-md-offset-4 col-md-4">
+        <div class="col-xs-offset-4 col-xs-4">
           <select class="form-control" name="secondaryProduct" value.bind="label.secondaryProduct" disabled.bind="!canSelectSecondaryProduct">
             <option value="" disabled selected>Select a secondary product</option>
             <option>STOCKSTAAL</option>
@@ -33,8 +33,8 @@
 
     <fieldset>
       <div class="row">
-          <label class="col-md-4 control-label">Description</label>
-          <div class="col-md-4">
+          <label class="col-xs-4 control-label">Description</label>
+          <div class="col-xs-4">
               <p class="description form-control-static" value.bind="label.description">Lorem Ipsum and then some</p>
           </div>
       </div>
@@ -43,8 +43,8 @@
     <fieldset>
 
       <div class="form-group">
-        <label class="col-md-4 control-label">Cleaning</label>
-        <div class="col-md-4">
+        <label class="col-xs-4 control-label">Cleaning</label>
+        <div class="col-xs-4">
 
             <div class="checkbox col-xs-${label.cleaningWays.length % 2 == 1 ? 4 : 6}" repeat.for="cleaningWay of label.cleaningWays">
               <label>
@@ -57,12 +57,19 @@
 
     </fieldset>
 
-    <div class="form-group">
-      <div class="col-sm-offset-4 col-sm-4">
+    <fieldset>
+      <label class="col-xs-4 control-label">Amount</label>
+      <div class="col-xs-1">
+        <input type="number" min="0" class="form-control" value.bind="label.amount" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <div class="col-xs-offset-4 col-xs-4">
         <button type="button" class="btn btn-primary btn-lg active" click.delegate="print()" disabled.bind="!canPrint">Print Label</button>
         <button type="button" class="btn btn-default btn-lg active" click.delegate="clear()">Clear</button>
       </div>
-    </div>
+    </fieldset>
   </form>
 
 </template>

@@ -1,5 +1,6 @@
 export class LabelData {
-  constructor(){
+  constructor() {
+    this.amount = 1;
     this.cleaningWays = [
       new CleaningWay("Air"),
       new CleaningWay("Steam"),
