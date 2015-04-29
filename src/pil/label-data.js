@@ -3,7 +3,8 @@ export class LabelData {
     this.cleaningWays = [
       new CleaningWay("Air"),
       new CleaningWay("Steam"),
-      new CleaningWay("Water")
+      new CleaningWay("Water"),
+      new CleaningWay("Nitrogen")
     ];
   }
 }

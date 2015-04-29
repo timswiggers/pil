@@ -32,12 +32,21 @@
     </fieldset>
 
     <fieldset>
+      <div class="row">
+          <label class="col-md-4 control-label">Description</label>
+          <div class="col-md-4">
+              <p class="description form-control-static" value.bind="label.description">Lorem Ipsum and then some</p>
+          </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
 
       <div class="form-group">
         <label class="col-md-4 control-label">Cleaning</label>
         <div class="col-md-4">
 
-            <div class="checkbox" repeat.for="cleaningWay of label.cleaningWays">
+            <div class="checkbox col-xs-${label.cleaningWays.length % 2 == 1 ? 4 : 6}" repeat.for="cleaningWay of label.cleaningWays">
               <label>
                 <input type="checkbox" checked.bind="cleaningWay.selected"> ${cleaningWay.name}
               </label>

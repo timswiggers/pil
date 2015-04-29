@@ -17,3 +17,11 @@
     font-size: 5em;
     margin-top: 50px;
 }
+
+fieldset {
+  margin: 10px auto;
+}
+
+p.description {
+  padding: 6px;
+}
