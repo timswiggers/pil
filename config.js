@@ -1,5 +1,6 @@
 System.config({
   "baseURL": "/",
+  "transpiler": "traceur",
   "babelOptions": {
     "optional": [
       "runtime"
@@ -21,8 +22,8 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.4",
     "font-awesome": "npm:font-awesome@4.3.0",
     "jquery": "github:components/jquery@2.1.3",
-    "traceur": "github:jmcriffey/bower-traceur@0.0.87",
-    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.87",
+    "traceur": "github:jmcriffey/bower-traceur@0.0.88",
+    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
     "github:aurelia/binding@0.5.0": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.6.0",
       "aurelia-metadata": "github:aurelia/metadata@0.4.0",
